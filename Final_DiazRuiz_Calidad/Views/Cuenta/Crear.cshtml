@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Crear";
+}
+<h6 id="EstoyCrearCuenta"></h6>
+<div class="container">
+    <div class="row">
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center"><h3>Crear cuenta</h3></div>
+                <div id="inputs" class="panel-body">
+
+                    <form action="/Cuenta/Crear" method="post">
+                        <div>
+                            <label class="control-label">Nombre :</label>
+                            <input id="txt1" class="form-control" type="text" name="Nombre" />
+                        </div>
+                        <div>
+                            <label class="control-label">Categoria :</label>
+                            <select id="txt2" class="form-control" name="Categoria">
+                                <option value="Debito">Debito</option>
+                                <option value="Credito">Credito</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="control-label">Saldo inicial :</label>
+                            <input id="txt3" class="form-control" type="number" name="SaldoInicial" />
+                        </div>
+                        <br />
+                        <button id="btnGuardar" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-saved"></span> Guardar</button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

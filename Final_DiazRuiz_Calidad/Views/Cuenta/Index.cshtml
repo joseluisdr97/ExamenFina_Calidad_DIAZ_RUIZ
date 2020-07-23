@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h6 id="EstoyIndexCuenta"></h6>
+<div class="container">
+    <br />
+    <br />
+    <br />
+    <a class="btn btn-primary pull-right" id="btnCrear" href="/Cuenta/Crear"><span class="glyphicon glyphicon-plus"></span> Crear cuenta</a>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Categoria</th>
+                        <th>Saldo inicial</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.IdCuenta</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.Categoria</td>
+                            <td>@item.SaldoInicial</td>
+                            <td><a href="/Gasto/Index?idCuenta=@item.IdCuenta">Gasto</a>  |  <a href="/Ingreso/Index?idCuenta=@item.IdCuenta">Ingreso</a></td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
